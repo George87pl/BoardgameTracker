@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gmail.gpolomicz.boardgametracker">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".AppProvider"
+            android:authorities="com.gmail.gpolomicz.boardgametracker.provider"
+            android:exported="false" />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.gmail.gpolomicz.boardgametracker.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".CollectionActivity"
+            android:label="@string/title_activity_collection"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gmail.gpolomicz.boardgametracker.MainActivity" />
+        </activity>
+        <activity
+            android:name=".BGAdd"
+            android:parentActivityName=".CollectionActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gmail.gpolomicz.boardgametracker.CollectionActivity" />
+        </activity>
+        <activity
+            android:name=".BGSearch"
+            android:parentActivityName=".BGAdd"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gmail.gpolomicz.boardgametracker.BGAdd" />
+        </activity>
+        <activity
+            android:name=".BGImport"
+            android:parentActivityName=".CollectionActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gmail.gpolomicz.boardgametracker.CollectionActivity" />
+        </activity>
+        <activity
+            android:name=".BGDetails"
+            android:parentActivityName=".CollectionActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gmail.gpolomicz.boardgametracker.CollectionActivity" />
+        </activity>
+        <activity
+            android:name=".BGEdit"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PlayerList"
+            android:label="@string/title_activity_player_list"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.PlayerStyle">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gmail.gpolomicz.boardgametracker.MainActivity" />
+        </activity>
+        <activity
+            android:name=".PlayerAdd"
+            android:parentActivityName=".PlayerList"
+            android:theme="@style/AppTheme.PlayerStyle">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gmail.gpolomicz.boardgametracker.PlayerList" />
+        </activity>
+        <activity
+            android:name=".PlayerDetail"
+            android:parentActivityName=".PlayerList"
+            android:theme="@style/AppTheme.PlayerStyle">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gmail.gpolomicz.boardgametracker.PlayerList" />
+        </activity>
+        <activity
+            android:name=".PlayerEdit"
+            android:theme="@style/AppTheme.PlayerStyle" />
+        <activity
+            android:name=".PlayedList"
+            android:label="@string/title_activity_played_list"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.PlayedStyle">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gmail.gpolomicz.boardgametracker.MainActivity" />
+        </activity>
+        <activity
+            android:name=".PlayedAdd"
+            android:theme="@style/AppTheme.PlayedStyle" />
+        <activity
+            android:name=".PlayedAddResult"
+            android:parentActivityName=".PlayedList"
+            android:theme="@style/AppTheme.PlayedStyle">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gmail.gpolomicz.boardgametracker.PlayedList" />
+        </activity>
+        <activity
+            android:name=".SelectPlayers"
+            android:theme="@style/AppTheme.PlayedStyle" />
+        <activity
+            android:name=".PlayedDetail"
+            android:parentActivityName=".PlayedList"
+            android:theme="@style/AppTheme.PlayedStyle">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gmail.gpolomicz.boardgametracker.PlayedList" />
+        </activity>
+    </application>
+
+</manifest>

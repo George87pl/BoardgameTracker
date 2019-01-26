@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#006d60</color>
+    <color name="colorPrimaryDark">#00574b</color>
+    <color name="colorAccent">#d81b60</color>
+    <color name="pstylePrimary">#ffa74a</color>
+    <color name="pstylePrimaryDark">#ff891a</color>
+    <color name="playStylePrimary">#4aabff</color>
+    <color name="playStylePrimaryDark">#0073ff</color>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Boardgame Tracker</string>
+    <string name="title_activity_collection">CollectionActivity</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="deldiag_positive_caption">Delete</string>
+    <string name="title_activity_player_list">PlayerList</string>
+    <string name="title_activity_played_list">PlayedList</string>
+</resources>

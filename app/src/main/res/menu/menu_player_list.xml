@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/sort_name"
+        android:title="Sort by name" />
+    <item
+        android:id="@+id/sort_scores"
+        android:title="Sort by scores" />
+    <item
+        android:id="@+id/sort_playing"
+        android:title="Sort by playing" />
+</menu>
